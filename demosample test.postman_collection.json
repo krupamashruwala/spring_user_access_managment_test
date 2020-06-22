@@ -1,0 +1,392 @@
+{
+	"info": {
+		"_postman_id": "f78a2004-1aa3-4228-afa2-1ac580c3b798",
+		"name": "demosample test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"superuser@gmail.com\",\r\n  \"password\": \"bgeUXQDbebirDMykH3n66KH7\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login-User Role",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"demo1@mail.com\",\r\n  \"password\": \"Admin@1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User - Save",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzYW1wbGVEZW1vIiwiYXV0aCI6IkFETUlOLFVTRVIiLCJzdWIiOiJzdXBlcnVzZXJAZ21haWwuY29tIiwiZXhwIjoxNTkyOTAxNjExfQ.vSaV7YjA7YsIA4rBopg0M225HqcbNQOcm1ZYeX5x_Sn-WynvbJNHIGC9RbPyuol5p7f4Es48Y0ClE0HFo51uYA"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"firstName\" : \"krishna 1 test\",\r\n\t\"lastName\" : \"KDM\",\r\n\t\"email\" : \"demo1@mail.com\",\r\n\t\"password\" : \"Admin@1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User - Save User Role for Checking",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzYW1wbGVEZW1vIiwiYXV0aCI6IlVTRVIiLCJzdWIiOiJkZW1vMUBtYWlsLmNvbSIsImV4cCI6MTU5Mjg5ODIwOH0.ZvIRS24wb0hQsXqrB3YvsQJWL1kzc21N5e_lSH_ugOLUriVf8bI5RgsjBG72Hdh5ZEJ1JUF2e38oDSw_4ctutA"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"firstName\" : \"krishna client 3 test\",\r\n\t\"lastName\" : \"KDM\",\r\n\t\"email\" : \"demo2@mail.com\",\r\n\t\"password\" : \"Admin@1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzYW1wbGVEZW1vIiwiYXV0aCI6IkFETUlOLFVTRVIiLCJzdWIiOiJzdXBlcnVzZXJAZ21haWwuY29tIiwiZXhwIjoxNTkyOTAxNjExfQ.vSaV7YjA7YsIA4rBopg0M225HqcbNQOcm1ZYeX5x_Sn-WynvbJNHIGC9RbPyuol5p7f4Es48Y0ClE0HFo51uYA"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzYW1wbGVEZW1vIiwiYXV0aCI6IkFETUlOLFVTRVIiLCJzdWIiOiJzdXBlcnVzZXJAZ21haWwuY29tIiwiZXhwIjoxNTkyOTAxNjExfQ.vSaV7YjA7YsIA4rBopg0M225HqcbNQOcm1ZYeX5x_Sn-WynvbJNHIGC9RbPyuol5p7f4Es48Y0ClE0HFo51uYA"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"krishna 1 test update\",\r\n    \"lastName\": \"KDM\",\r\n    \"email\": \"demo1@mail.com\",\r\n    \"mobile\": \"9555544444\",\r\n    \"description\": \"test\",\r\n    \"enabled\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzYW1wbGVEZW1vIiwiYXV0aCI6IkFETUlOLFVTRVIiLCJzdWIiOiJzdXBlcnVzZXJAZ21haWwuY29tIiwiZXhwIjoxNTkyOTAxNjExfQ.vSaV7YjA7YsIA4rBopg0M225HqcbNQOcm1ZYeX5x_Sn-WynvbJNHIGC9RbPyuol5p7f4Es48Y0ClE0HFo51uYA"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/user/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Get Details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzYW1wbGVEZW1vIiwiYXV0aCI6IkFETUlOLFVTRVIiLCJzdWIiOiJzdXBlcnVzZXJAZ21haWwuY29tIiwiZXhwIjoxNTkyOTAxNjExfQ.vSaV7YjA7YsIA4rBopg0M225HqcbNQOcm1ZYeX5x_Sn-WynvbJNHIGC9RbPyuol5p7f4Es48Y0ClE0HFo51uYA"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/user/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Find By Email",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzYW1wbGVEZW1vIiwiYXV0aCI6IkFETUlOLFVTRVIiLCJzdWIiOiJzdXBlcnVzZXJAZ21haWwuY29tIiwiZXhwIjoxNTkyOTAxNjExfQ.vSaV7YjA7YsIA4rBopg0M225HqcbNQOcm1ZYeX5x_Sn-WynvbJNHIGC9RbPyuol5p7f4Es48Y0ClE0HFo51uYA"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/user/byEmail?email=demo1@mail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"byEmail"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "demo1@mail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "5e4e6fd5-dab4-4990-845a-ad2659be7273",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "f0f2084f-9959-4f70-a157-a6a347a1ebb9",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
